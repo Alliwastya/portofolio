@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CODENAME: ZERO — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text">INITIALIZING SYSTEM...</div>
+  <div class="loader-bar"></div>
+  <div class="loader-sub" id="loader-msg">LOADING ASSETS...</div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-crosshair"></div>
+
+<!-- CANVAS -->
+<canvas id="bg-canvas"></canvas>
+<div class="scanlines"></div>
+
+<div class="wrapper">
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero">alliwa<span>satya</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    <span>PPLG</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <h1 class="hero-title glitch" data-text="NAMA KAMU">
+    <span class="name-highlight">ALLIWA SATYA SYAHADAH</span>
+    FULL-STACK DEV
+  </h1>
+  <p class="hero-sub">Cyber Ops · Software Engineering · System Architecture</p>
+  <p class="hero-typing" id="typing-text"></p>
+  <div class="hero-cta">
+    <a href="#projects" class="btn btn-primary">[ VIEW MISSIONS ]</a>
+    <a href="#contact" class="btn btn-outline">[ OPEN CHANNEL ]</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <span class="section-tag">// 1 &nbsp;</span>
+    <h2 class="section-title glitch-green" data-text="Profile">Profile</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-img-frame">
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+        <img src="awiwa.jpg" alt="Foto Profil" class="about-photo">
+        <div class="cert-scan"></div>
+      </div>
+      <div class="about-cv-card reveal">
+        <a href="cvalliwa.pdf" target="_blank" class="cv-preview-link" download="Alliwa_Satya_Syahadah_CV.pdf">
+          <div class="cv-preview-frame">
+            <div class="cv-preview-content">
+              <div class="cv-preview-icon">📄</div>
+              <div class="cv-preview-text">
+                <span>Lihat CV</span>
+                <small>PDF / Word</small>
+              </div>
+            </div>
+            <div class="cv-preview-overlay">
+              <span>Buka CV</span>
+              <small>PDF / DOCX</small>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Years Ops</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Certifikat</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="100">0</span>
+          <span class="stat-label">% Commit</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p>Saya <b>Alliwa Satya Syahadah</b>, seorang siswa dari <b>SMKN 1 Ciomas</b> jurusan <b>PPLG (Pengembangan Perangkat Lunak dan Gim)</b> yang memiliki minat besar di dunia teknologi, khususnya pengembangan web dan sistem digital.</p>
+
+<p>Saya terbiasa membangun aplikasi berbasis web dengan pendekatan terstruktur — mulai dari memahami kebutuhan pengguna, merancang solusi, hingga mengimplementasikan sistem yang efisien dan fungsional. Bagi saya, coding bukan hanya menulis program, tetapi juga proses <b>problem solving</b> yang membutuhkan logika dan kreativitas.</p>
+
+<p>Saya memiliki pengalaman dalam pengembangan <b>front-end dan back-end</b>, serta memahami dasar database dan alur kerja aplikasi modern. Saya terus belajar dan mengembangkan skill untuk dapat menciptakan sistem yang <b>responsif, scalable, dan user-friendly</b>.</p>
+
+<p><b>Tujuan saya:</b> menjadi seorang developer profesional yang mampu membangun solusi digital yang bermanfaat dan berdampak di dunia nyata.</p>
+      <p>Status: <b>ACTIVE DUTY</b> — Siap menerima tantangan baru di bidang teknologi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS & TOOLS -->
+<section id="skills" class="skills-section">
+  <div class="section-header reveal">
+    <span class="section-tag">// 2 &nbsp;</span>
+    <h2 class="section-title glitch-green" data-text="SKILLS & TOOLS">SKILLS & TOOLS</h2>
+    <div class="section-line"></div>
+  </div>
+  
+  <div class="skills-tech-grid">
+    <!-- HTML -->
+    <div class="tech-card reveal" data-tech="html">
+      <div class="tech-card-inner">
+        <svg class="tech-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 15h60L75 85L50 95L25 85Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M35 35h30M30 50h40M30 65h35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div class="tech-label">HTML</div>
+        <div class="tech-badge">LEARNING</div>
+      </div>
+      <div class="card-glow"></div>
+    </div>
+
+    <!-- CSS -->
+    <div class="tech-card reveal" data-tech="css">
+      <div class="tech-card-inner">
+        <svg class="tech-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 20h50L70 80L50 88L30 80Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="50" cy="35" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="38" cy="55" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="62" cy="55" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="50" cy="70" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <div class="tech-label">CSS</div>
+        <div class="tech-badge">LEARNING</div>
+      </div>
+      <div class="card-glow"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="tech-card reveal" data-tech="javascript">
+      <div class="tech-card-inner">
+        <svg class="tech-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="15" y="15" width="70" height="70" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <text x="50" y="65" font-size="40" font-weight="bold" text-anchor="middle" fill="none" stroke="currentColor" stroke-width="1" font-family="monospace">JS</text>
+        </svg>
+        <div class="tech-label">JavaScript</div>
+        <div class="tech-badge">LEARNING</div>
+      </div>
+      <div class="card-glow"></div>
+    </div>
+
+    <!-- Laravel -->
+    <div class="tech-card reveal" data-tech="laravel">
+      <div class="tech-card-inner">
+        <svg class="tech-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 20C30 20 20 35 20 50C20 65 30 80 50 80C70 80 80 65 80 50C80 35 70 20 50 20Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M40 40L50 50L40 60M60 40L50 50L60 60" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="tech-label">Laravel</div>
+        <div class="tech-badge">LEARNING</div>
+      </div>
+      <div class="card-glow"></div>
+    </div>
+
+    <!-- VS Code -->
+    <div class="tech-card reveal" data-tech="vscode">
+      <div class="tech-card-inner">
+        <svg class="tech-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 15L45 40L20 65V15Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M45 40L75 20V80L45 60Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="tech-label">VS Code</div>
+        <div class="tech-badge">LEARNING</div>
+      </div>
+      <div class="card-glow"></div>
+    </div>
+
+    <!-- GitHub -->
+    <div class="tech-card reveal" data-tech="github">
+      <div class="tech-card-inner">
+        <svg class="tech-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 15C30 15 15 30 15 50C15 65 25 77 38 82C39 82 40 81 40 80V73C28 75 26 67 26 67C25 64 23 60 20 58C18 57 18 55 20 55C23 55 27 59 28 60C32 65 38 63 40 62C40 60 41 57 43 56C33 55 22 51 22 37C22 32 24 28 28 25C27 22 26 17 28 13C28 13 35 11 48 20C52 19 56 19 60 20C73 11 80 13 80 13C82 17 81 22 80 25C84 28 86 32 86 37C86 51 75 55 65 56C67 57 68 60 68 63V80C68 81 69 82 70 82C83 77 93 65 93 50C93 30 78 15 58 15C58 15 50 15 50 15Z" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <div class="tech-label">GitHub</div>
+        <div class="tech-badge">LEARNING</div>
+      </div>
+      <div class="card-glow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certs">
+  <div class="section-header reveal">
+     <span class="section-tag">// 3 &nbsp;</span>
+    <h2 class="section-title glitch-green" data-text="Sertifikat">Sertifikat</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="cert-grid">
+
+    <!-- Cert 1 -->
+    <div class="cert-card reveal">
+      <div class="cert-img-wrap">
+        <!-- Ganti src dengan gambar sertifikat Anda, misalnya: <img src="sertifikat1.jpg" alt="Sertifikat 1"> -->
+        <img src="sertifikat3.jpg" alt="Sertifikat 1" />
+        <div class="cert-scan"></div>
+        <div class="cert-overlay">
+          <div style="font-size:2rem">🔍</div>
+          <div class="cert-overlay-text">VIEW CREDENTIAL</div>
+        </div>
+      </div>
+      <div class="cert-info">
+        <div class="cert-tag">◆ CERTIFIED &nbsp;// 2025</div>
+        <div class="cert-title">Front end Web Development</div>
+        <div class="cert-issuer">Dicoding Indonesia · Bootcamp</div>
+      </div>
+    </div>
+
+    <!-- Cert 2 -->
+    <div class="cert-card reveal">
+      <div class="cert-img-wrap">
+        <img src="sertificat1.jpg" alt="Sertifikat 2" />
+        <div class="cert-scan"></div>
+        <div class="cert-overlay">
+          <div style="font-size:2rem">🔍</div>
+          <div class="cert-overlay-text">VIEW CREDENTIAL</div>
+        </div>
+      </div>
+      <div class="cert-info">
+        <div class="cert-tag">◆ CERTIFIED &nbsp;// 2024</div>
+        <div class="cert-title">Belajar ID</div>
+        <div class="cert-issuer">Google for Education</div>
+      </div>
+    </div>
+
+    <!-- Cert 3 -->
+    <div class="cert-card reveal">
+      <div class="cert-img-wrap">
+        <img src="serifikat2.jpg" alt="Sertifikat 3" />
+        <div class="cert-scan"></div>
+        <div class="cert-overlay">
+          <div style="font-size:2rem">🔍</div>
+          <div class="cert-overlay-text">VIEW CREDENTIAL</div>
+        </div>
+      </div>
+      <div class="cert-info">
+        <div class="cert-tag">◆ CERTIFIED &nbsp;// 2023</div>
+        <div class="cert-title">Learning Pemograman Web</div>
+        <div class="cert-issuer">Dicoding Indonesia · Bootcamp</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header reveal">
+     <span class="section-tag">// 4&nbsp;</span>
+    <h2 class="section-title glitch-green" data-text="Project">Project</h2>
+    <div class="section-line"></div>
+  </div>
+<div class="projects-grid">
+  <div class="project-card reveal">
+    <img src="book.jpg" alt="Bookshelf App" style="width:100%; border-bottom:1px solid rgba(0,255,65,.2);">
+
+    <div class="project-card-content" style="padding:15px;">
+      
+      <div class="project-type">◆ WEB APP</div>
+
+      <div class="project-title">BOOKSHELF MANAGEMENT SYSTEM</div>
+
+      <div class="project-desc">
+        Aplikasi manajemen buku berbasis web yang memungkinkan pengguna 
+        menambahkan, mengelompokkan, dan melacak buku yang sudah atau belum dibaca 
+        dengan tampilan dashboard interaktif.
+      </div>
+
+      <!-- TECH STACK -->
+      <div style="margin-top:10px; font-size:12px; color:#96b99b;">
+        HTML · CSS · JavaScript
+      </div>
+
+      <!-- STATUS -->
+      <p style="margin-top:10px; font-size:12px; color:#ffc260;">
+        Status: Development (belum di hosting)
+      </p>
+
+      <!-- BUTTON -->
+      <div style="margin-top:12px;">
+        <a href="book.jpg" target="_blank" class="btn-outline" style="padding:5px 10px; font-size:12px;">
+          📸 Preview
+        </a>
+    </div>
+  </div>
+</div>
+    <div class="project-card reveal">
+
+  <!-- GAMBAR PROJECT -->
+  <img src="musik.jpg" alt="Music App" 
+  style="width:100%; height:180px; object-fit:cover; border-bottom:1px solid rgba(255,255,255,.1);">
+
+  <div class="project-card-content" style="padding:15px;">
+    
+    <!-- TYPE -->
+    <div class="project-type" style="color:#00e0ff;">◆ MUSIC WEB APP</div>
+
+    <!-- TITLE -->
+    <div class="project-title" style="font-size:18px; font-weight:bold; margin-top:5px;">
+      ALL MUSIK INDONESIA PLATFORM
+    </div>
+
+    <!-- DESC -->
+    <div class="project-desc" style="margin-top:8px; color:#ccc;">
+      Website musik Indonesia yang menampilkan berbagai band legendaris seperti 
+      Sheila On 7, Dewa 19, dan Slank, lengkap dengan informasi profil, genre, 
+      serta akses ke daftar lagu.
+    </div>
+
+    <!-- FITUR -->
+    <div style="margin-top:10px; font-size:12px; color:#aaa;">
+      ✔️ Informasi Band <br>
+      ✔️ Daftar Lagu <br>
+      ✔️ UI Interaktif <br>
+      ✔️ Responsive Design
+    </div>
+
+    <!-- TECH -->
+    <div style="margin-top:10px; font-size:12px; color:#96b99b;">
+      HTML · CSS · JavaScript
+    </div>
+
+    <!-- STATUS -->
+    <p style="margin-top:10px; font-size:12px; color:#ffc260;">
+      Status: Development (belum di hosting)
+    </p>
+
+    <!-- BUTTON -->
+    <div style="margin-top:12px; display:flex; gap:10px;">
+      
+      <a href="musik.jpg" target="_blank" 
+      class="btn-outline" style="padding:6px 12px; font-size:12px;">
+        🎵 Preview UI
+      </a>
+    </div>
+
+  </div>
+</div>
+    <div class="project-card reveal">
+  <img src="roti.jpg" alt="Web Toko Roti" style="width:100%; border-bottom:1px solid rgba(0,255,65,.2);">
+
+  <div class="project-card-content" style="padding:15px;">
+    
+    <div class="project-type">◆ WEBSITE TOKO ROTI</div>
+
+    <div class="project-title">ROTI MANIS PREMIUM STORE</div>
+
+    <div class="project-desc">
+      Website toko roti yang menampilkan berbagai pilihan roti manis premium 
+      dengan topping melimpah seperti coklat dan keju. 
+      Dilengkapi fitur katalog produk, best seller, dan pemesanan online 
+      dengan tampilan yang menarik dan menggugah selera.
+    </div>
+
+    <!-- TECH STACK -->
+    <div style="margin-top:10px; font-size:12px; color:#96b99b;">
+      HTML · CSS · JavaScript
+    </div>
+
+    <!-- STATUS -->
+    <p style="margin-top:10px; font-size:12px; color:#ffc260;">
+      Status: Development (belum di hosting)
+    </p>
+
+    <!-- BUTTON -->
+    <div style="margin-top:12px;">
+      <a href="roti.jpg" target="_blank" class="btn-outline" style="padding:5px 10px; font-size:12px;">
+        📸 Lihat Tampilan
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header reveal" style="justify-content:center">
+    <span class="section-tag">// 5 &nbsp;</span>
+    <h2 class="section-title glitch-green" data-text="Contact">Contact</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="contact-panel contact-form">
+      <h3>Let's work together!</h3>
+      <p>Feel free to reach out to me. I'm available for new projects, collaborations, and full-stack missions.</p>
+      <form>
+        <label for="name">Your Name</label>
+        <input id="name" type="text" placeholder="Your Name">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" placeholder="Email Address">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message..."></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+    <div class="contact-panel contact-info">
+      <h3>Contact Information</h3>
+      <p>Reach me through the channels below for opportunities or consultations.</p>
+      <div class="info-card">
+        <span>📧</span>
+        <div>
+          <strong>Gmail</strong>
+          <a href="mailto:alliwa19syahadah@gmail.com">alliwa19syahadah@gmail.com</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <span>🐙</span>
+        <div>
+          <strong>GitHub</strong>
+          <a href="https://github.com/Alliwastya" target="_blank">github.com/Alliwastya</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <span>📷</span>
+        <div>
+          <strong>Instagram</strong>
+          <a href="https://www.instagram.com/alliwastya" target="_blank">instagram.com/alliwastya</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <span>💬</span>
+        <div>
+          <strong>WhatsApp</strong>
+          <p>+62 889-0559-9872</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>◆ CODENAME: ZERO ◆ &nbsp;|&nbsp; BUILD v2.0.26 &nbsp;|&nbsp; ALL SYSTEMS OPERATIONAL</p>
+  <p style="margin-top:.5rem">// Designed & Engineered by alliwastya</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
