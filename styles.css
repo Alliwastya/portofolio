@@ -968,6 +968,27 @@ footer {
   .about-grid { grid-template-columns:1fr; }
   .about-img-wrap { display:block; }
   .about-img-wrap { margin-bottom: 2rem; }
+  .about-text {
+    padding: 0 0.5rem;
+  }
+  .about-text p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .stat-box {
+    padding: 1.2rem 1rem;
+  }
+  .about-cv-card {
+    margin-top: 1rem;
+  }
   nav { padding: 0 1rem; }
   .nav-toggle { display: block; }
   .nav-status { display: none; }
@@ -990,6 +1011,28 @@ footer {
   .nav-links a { font-size: .9rem; }
   .projects-grid { grid-template-columns:1fr; }
   .contact-grid { grid-template-columns:1fr; }
+}
+
+/* EXTRA SMALL MOBILE */
+@media(max-width:480px){
+  section { padding: 4rem 1rem; }
+  .about-text {
+    padding: 0;
+  }
+  .about-text p {
+    font-size: 0.8rem;
+    line-height: 1.65;
+    text-align: justify;
+  }
+  .section-title {
+    font-size: 1.2rem;
+  }
+  .stat-num {
+    font-size: 1.5rem;
+  }
+  .stat-label {
+    font-size: 0.6rem;
+  }
 }
 
 /* LOADING SCREEN */
