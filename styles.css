@@ -269,8 +269,8 @@ section { padding: 6rem 2rem; max-width:1100px; margin:0 auto; }
 /* ── ABOUT ── */
 .about-grid {
   display:grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap:3rem; align-items:center;
+  grid-template-columns: 1fr;
+  gap:3rem; align-items:start;
 }
 .about-img-wrap {
   position:relative;
@@ -311,8 +311,8 @@ section { padding: 6rem 2rem; max-width:1100px; margin:0 auto; }
 .corner.bl { bottom:8px; left:8px; border-width:0 0 2px 2px; }
 .corner.br { bottom:8px; right:8px; border-width:0 2px 2px 0; }
 .about-stats {
-  display:grid; grid-template-columns:1fr 1fr;
-  gap:1px; margin-top:1rem;
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  gap:1rem; margin-top:2rem;
   border:1px solid var(--border);
 }
 .about-cv-card {
@@ -402,12 +402,26 @@ section { padding: 6rem 2rem; max-width:1100px; margin:0 auto; }
   color:var(--text-dim); text-transform:uppercase;
   margin-top:.25rem; display:block;
 }
+.about-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  column-gap: 2.5rem;
+}
 .about-text p {
   font-family:'Exo 2',sans-serif;
   font-size:.95rem; line-height:1.8;
-  color:var(--text); margin-bottom:1rem;
+  color:var(--text); margin-bottom:0;
 }
 .about-text p b { color:var(--green); font-family:'Share Tech Mono',monospace; }
+.about-text .about-stats {
+  grid-column: 1 / -1;
+  margin-top: 1.5rem;
+}
+.about-text .about-cv-card {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+}
 
 /* ── SKILLS ── */
 .skills-grid {
@@ -970,6 +984,8 @@ footer {
   .about-img-wrap { margin-bottom: 2rem; }
   .about-text {
     padding: 0 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .about-text p {
     font-size: 0.85rem;
@@ -979,7 +995,7 @@ footer {
     overflow-wrap: break-word;
   }
   .about-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 0.5rem;
     margin-top: 1.5rem;
   }
@@ -1018,6 +1034,7 @@ footer {
   section { padding: 4rem 1rem; }
   .about-text {
     padding: 0;
+    grid-template-columns: 1fr;
   }
   .about-text p {
     font-size: 0.8rem;
